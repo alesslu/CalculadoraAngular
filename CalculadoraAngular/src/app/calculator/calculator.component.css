@@ -1,47 +1,75 @@
-html {
-  font-size: 62.5%;
+*{
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+.contenedor-calculadora{
+  max-width: 320px;
+  height: 388px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 0.5px solid rgba(128, 128, 128, 0.466);
 }
 
-.calculator {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 400px;
-}
-
-.calculator-screen {
-  width: 100%;
-  height: 80px;
-  border: none;
-  background-color: #0051ff;
-  color: #fff;
-  text-align: right;
-  padding-right: 20px;
+.carrito{
+  width: 50px;
+  height: 40px;
+  margin-right: 10px;
   padding-left: 10px;
-  font-size: 4rem;
+}
+
+.parte_superior {
+  width: 100%;
+  height: 60px;
+  border-style: none;
+  background-color: #06B6D4;
+  color: #fff;
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  font-weight: 300;
+}
+
+.subtema2{
+  font-weight: 600;
+}
+
+.parte_resultado{
+  width: 100%;
+  height: 60px;
+  border-style: none;
+  background-color: #ffffff;
+  color: gray;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 button {
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 0;
+  border: 0.1px solid rgba(128, 128, 128, 0.253);
   height: 60px;
-  font-size: 2rem !important;
 }
 
-.equal-sign {
-  height: 98%;
-  grid-area: 2 / 4 / 6 / 5;
+.btn-operacion , .parte_inferior{
+  background-color: rgba(184, 184, 184, 0.432);
+  text-align: center;
+}
+
+.parte_inferior{
+  font-size: 12px;
+  padding: 4px;
+
 }
 
 .calculator-keys {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+
+.btn-listo{
+  background-color: #06B6D4;
 }

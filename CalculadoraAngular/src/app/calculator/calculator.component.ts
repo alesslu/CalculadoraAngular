@@ -29,10 +29,10 @@ export class CalculatorComponent {
       this.limpiar();
     }
     else if (this.salida === '') {
-      this.salida = "S/" + valor;
+      this.salida = "$" + valor;
     }
     else if (this.salida[this.salida.length-1] === this.operador) {
-      this.salida = this.salida + "S/" + valor;
+      this.salida = this.salida + "$" + valor;
     }
     else {
       this.salida = this.salida + valor;
@@ -54,7 +54,7 @@ export class CalculatorComponent {
         this.resultado = this.numeroActual / this.numeroAnterior;
         break;
     }
-    this.salida = "S/" + this.resultado.toString();
+    this.salida = "$" + this.resultado.toString();
     console.log(this.numeroActual, this.numeroAnterior, this.operador, this.resultado);
   }
 
