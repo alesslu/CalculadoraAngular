@@ -17,19 +17,16 @@ export class CalculatorComponent {
   agregar(valor: string): void {
     if (this.operaciones.includes(valor)) {
       this.operador = valor;
-      this.numeroActual = Number(this.salida.substring(2));
+      this.numeroActual = Number(this.salida.substring(1));
       this.salida = this.salida + valor;
     } 
     else if (valor === '=') {
-      console.log(this.salida.split(this.operador)[1].substring(2));
-      this.numeroAnterior = Number(this.salida.split(this.operador)[1].substring(2));
+      console.log(this.salida.split(this.operador)[1].substring(1));
+      this.numeroAnterior = Number(this.salida.split(this.operador)[1].substring(1));
       this.calcular();
     } 
     else if (valor === 'C') {
       this.limpiar();
-    }
-    else if (valor === 'all-clear') {
-      this.retroceso();
     }
     else if (this.salida === '') {
       this.salida = "$" + valor;
@@ -62,11 +59,8 @@ export class CalculatorComponent {
   }
 
   limpiar(): void {
-    this.salida = '$';
-    this.numeroActual = 0;
-    this.numeroAnterior = 0;
+    this.salida = '';
   }
-
   retroceso():void{
       this.salida = String(this.salida.slice(0,this.salida.length-1));
   }

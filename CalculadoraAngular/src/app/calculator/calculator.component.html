@@ -16,32 +16,33 @@
   <div class="calculator-keys">
     
     <!-- Primera fila -->
-    <button type="button" class="operator btn btn-operacion" value="/" (click)="agregar('/')">&divide;</button>
-    <button type="button" value="1" class="btn btn-light waves-effect" (click)="agregar('1')">1</button>
-    <button type="button" value="2" class="btn btn-light waves-effect" (click)="agregar('2')">2</button>
-    <button type="button" value="3" class="btn btn-light waves-effect" (click)="agregar('3')">3</button>
-    <button type="button" class="btn btn-light waves-effect" value="all-clear" (click)="retroceso()"><img src="https://img.icons8.com/plumpy/24/000000/clear-symbol--v1.png"/></button>
+    <button type="button" class="div1 operator btn btn-operacion" value="/" (click)="agregar('/')">&divide;</button>
+    <button type="button" value="1" class="div2 btn btn-light waves-effect" (click)="agregar('1')">1</button>
+    <button type="button" value="2" class="div3 btn btn-light waves-effect" (click)="agregar('2')">2</button>
+    <button type="button" value="3" class="div4 btn btn-light waves-effect" (click)="agregar('3')">3</button>
+    <button type="button" class="div5 btn btn-light waves-effect" value="all-clear" (click)="retroceso()"><img src="https://img.icons8.com/plumpy/24/000000/clear-symbol--v1.png"/></button>
 
     <!-- Segunda fila -->
-    <button type="button" class="operator btn btn-operacion" value="" (click)="agregar('')">&times;</button>
-    <button type="button" value="4" class="btn btn-light waves-effect" (click)="agregar('4')">4</button>
-    <button type="button" value="5" class="btn btn-light waves-effect" (click)="agregar('5')">5</button>
-    <button type="button" value="6" class="btn btn-light waves-effect" (click)="agregar('6')">6</button>
-    <button type="button" class="btn btn-light waves-effect" value="C" (click)="limpiar()">C</button>
+    <button type="button" class="div6 operator btn btn-operacion" value="" (click)="agregar('')">&times;</button>
+    <button type="button" value="4" class="div7 btn btn-light waves-effect" (click)="agregar('4')">4</button>
+    <button type="button" value="5" class="div8 btn btn-light waves-effect" (click)="agregar('5')">5</button>
+    <button type="button" value="6" class="div9 btn btn-light waves-effect" (click)="agregar('6')">6</button>
+    <button type="button" class="div10 btn btn-light waves-effect" value="all-clear" (click)="limpiar()">C</button>
  
      <!-- Tercera fila -->
-     <button type="button" class="operator btn btn-operacion" value="-" (click)="agregar('-')">-</button>
-    <button type="button" value="7" class="btn btn-light waves-effect" (click)="agregar('7')">7</button>
-    <button type="button" value="8" class="btn btn-light waves-effect" (click)="agregar('8')">8</button>
-    <button type="button" value="9" class="btn btn-light waves-effect" (click)="agregar('9')">9</button>
-    <button type="button" class="btn btn-listo" value="=" (click)="agregar('=')"></button>
+     <button type="button" class="div11 operator btn btn-operacion" value="-" (click)="agregar('-')">-</button>
+    <button type="button" value="7" class="div12 btn btn-light waves-effect" (click)="agregar('7')">7</button>
+    <button type="button" value="8" class="div13 btn btn-light waves-effect" (click)="agregar('8')">8</button>
+    <button type="button" value="9" class="div14 btn btn-light waves-effect" (click)="agregar('9')">9</button>
+    <button type="button" class="div15 btn btn-listo" value="=" (click)="agregar('=')">=</button>
+    
 
     <!-- Cuarta fila -->
-    <button type="button" class="operator btn btn-operacion" value="+" (click)="agregar('+')">+</button>
-    <button type="button" value="0" class="btn btn-light waves-effect" (click)="agregar('0')"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAM0lEQVR4nGNgQALW1tb/QRhZjCh5a6gEqXg4GsBAJBhiBlhj8fMQMwAboJ0B1gOWEikBALdg2bFEc4nNAAAAAElFTkSuQmCC"></button>
-    <button type="button" value="0" class="btn btn-light waves-effect" (click)="agregar('0')">0</button>
-    <button type="button" value="." class="btn btn-light waves-effect" (click)="agregar('.')">.</button>
-    <button type="button" class="btn btn-listo" value="=" (click)="calcular()">=</button>
+    <button type="button" class="div16 operator btn btn-operacion" value="+" (click)="agregar('+')">+</button>
+    <button type="button" value="0" class="div17 btn btn-light waves-effect" (click)="agregar('0')"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAM0lEQVR4nGNgQALW1tb/QRhZjCh5a6gEqXg4GsBAJBhiBlhj8fMQMwAboJ0B1gOWEikBALdg2bFEc4nNAAAAAElFTkSuQmCC"></button>
+    <button type="button" value="0" class="div18 btn btn-light waves-effect" (click)="agregar('0')">0</button>
+    <button type="button" value="." class="div19 btn btn-light waves-effect" (click)="agregar('.')">.</button>
+    
 
   </div>
 
