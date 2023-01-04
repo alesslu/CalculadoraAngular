@@ -1,41 +1,52 @@
-<div class="calculator card">
+<div class="contenedor-calculadora">
 
-    <input type="text" class="calculator-screen z-depth-1" value="{{ salida }}" disabled />
-  
-    <div class="calculator-keys">
-      <!-- Operaciones -->
-      <button type="button" class="operator btn btn-info" value="+" (click)="agregar('+')">+</button>
-      <button type="button" class="operator btn btn-info" value="-" (click)="agregar('-')">-</button>
-      <button type="button" class="operator btn btn-info" value="*" (click)="agregar('*')">&times;</button>
-      <button type="button" class="operator btn btn-info" value="/" (click)="agregar('/')">&divide;</button>
-      <!-- Numeros -->
-      <button type="button" value="7" class="btn btn-light waves-effect" (click)="agregar('7')">7</button>
-      <button type="button" value="8" class="btn btn-light waves-effect" (click)="agregar('8')">8</button>
-      <button type="button" value="9" class="btn btn-light waves-effect" (click)="agregar('9')">9</button>
-      <button type="button" value="4" class="btn btn-light waves-effect" (click)="agregar('4')">4</button>
-      <button type="button" value="5" class="btn btn-light waves-effect" (click)="agregar('5')">5</button>
-      <button type="button" value="6" class="btn btn-light waves-effect" (click)="agregar('6')">6</button>
-      <button type="button" value="1" class="btn btn-light waves-effect" (click)="agregar('1')">1</button>
-      <button type="button" value="2" class="btn btn-light waves-effect" (click)="agregar('2')">2</button>
-      <button type="button" value="3" class="btn btn-light waves-effect" (click)="agregar('3')">3</button>
-      <button type="button" value="0" class="btn btn-light waves-effect" (click)="agregar('0')">0</button>
-      <button type="button" value="." class="decimal function btn btn-secondary" (click)="agregar('.')">.</button>
-      <button type="button" class="function btn btn-secondary" value=".">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square"
-          viewBox="0 0 16 16">
-          <path
-            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-          <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-        </svg>
-      </button>
-      <!-- Borrar -->
-      <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear" (click)="limpiar()">
-        AC
-      </button>
-      <!-- Igual -->
-      <button type="button" class="equal-sign operator btn btn-default" value="=" (click)="agregar('=')">
-        =
-      </button>
+  <div class="parte_superior">
+    <img class="carrito" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACP0lEQVR4nL2WzW9MURiHr0pQInZWNrqz4A+giIXEVohEYikhdlImbBAhqOLPQNhIpFWlKSHVja92WqMxk7YzZu5MF60OZnR6H3lvb5ub6vm4122f5CQnJ+e8v3vPx/v+HMcCYC2wD7gD9AMu8CdobjDWAeyVuTYxtQDNwAWgjD3yISlZG1f0GJAnPuPA0SiCa4ArgMf/IzFuAk0m0SbgIcnzQCsO3GDluKY7U5/szzonPkz47dH3qaSEPeDIcrdXLoNP7te88KGBHOs7h8hUa0mJ54GNYeGLy82a82Dbyy+0f6uQIKlwclC+05Of8hzozyYpXPKTDLBfN+txcZrmrjTH349Hbk/dH6qwrSJ8Vyc8NdtgU1eadZ1DkVtqpKgKe1uE35n25uBALpZwd3lGFfKtY5OH72UnI4tufpam2phThSyJcN0kLM8pqrA8RQ01K2FhR9/XSMId+idYs9pq4Wy6GEn44/RvXbiSExRxI32TVWvR7b0ZU2l74wTOwYgEahsusqV7WCva0pvheUV5mxe45QR2ZbXZvZAyxa4YaXgelzIulzOu3w8jFe3U5wJPSspsFU6Z87U58EhGeiozi1v6Ysl2nh4s+ONbe0ZMYdrC1WkDMGZaUa7PsvPVKLtej/r9MPKnInpmsKALMfGPCRRjlpDPUuEBh1Uu5PoKCl81mT0xZklz38Zprr69DSPGLOzDYjCmPFPHQHDbzwdvzxaZe07WxhJd8gFy9q3iHKSIB8GlqkmTvoy1A3tst/Uv0BTZfoVUYs8AAAAASUVORK5CYII=">
+      
+    <div class="tema">
+      <div class="subtema1">Add expense to</div>
+      <div class="subtema2">Groceries</div>
     </div>
+
   </div>
+  
+  
+  <input type="text" class="parte_resultado" value="{{ salida }}" disabled/>
+
+  <div class="calculator-keys">
+    
+    <!-- Primera fila -->
+    <button type="button" class="operator btn btn-operacion" value="/" (click)="agregar('/')">&divide;</button>
+    <button type="button" value="1" class="btn btn-light waves-effect" (click)="agregar('1')">1</button>
+    <button type="button" value="2" class="btn btn-light waves-effect" (click)="agregar('2')">2</button>
+    <button type="button" value="3" class="btn btn-light waves-effect" (click)="agregar('3')">3</button>
+    <button type="button" class="btn btn-light waves-effect" value="all-clear" (click)="limpiar()"><img src="https://img.icons8.com/plumpy/24/000000/clear-symbol--v1.png"/></button>
+
+    <!-- Segunda fila -->
+    <button type="button" class="operator btn btn-operacion" value="*" (click)="agregar('*')">&times;</button>
+    <button type="button" value="4" class="btn btn-light waves-effect" (click)="agregar('4')">4</button>
+    <button type="button" value="5" class="btn btn-light waves-effect" (click)="agregar('5')">5</button>
+    <button type="button" value="6" class="btn btn-light waves-effect" (click)="agregar('6')">6</button>
+    <button type="button" class="btn btn-light waves-effect" value="all-clear" (click)="limpiar()">C</button>
+ 
+     <!-- Tercera fila -->
+     <button type="button" class="operator btn btn-operacion" value="-" (click)="agregar('-')">-</button>
+    <button type="button" value="7" class="btn btn-light waves-effect" (click)="agregar('7')">7</button>
+    <button type="button" value="8" class="btn btn-light waves-effect" (click)="agregar('8')">8</button>
+    <button type="button" value="9" class="btn btn-light waves-effect" (click)="agregar('9')">9</button>
+    <button type="button" class="btn btn-listo" value="=" (click)="agregar('=')"></button>
+
+    <!-- Cuarta fila -->
+    <button type="button" class="operator btn btn-operacion" value="+" (click)="agregar('+')">+</button>
+    <button type="button" value="0" class="btn btn-light waves-effect" (click)="agregar('0')"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAM0lEQVR4nGNgQALW1tb/QRhZjCh5a6gEqXg4GsBAJBhiBlhj8fMQMwAboJ0B1gOWEikBALdg2bFEc4nNAAAAAElFTkSuQmCC"></button>
+    <button type="button" value="0" class="btn btn-light waves-effect" (click)="agregar('0')">0</button>
+    <button type="button" value="." class="btn btn-light waves-effect" (click)="agregar('.')">.</button>
+    <button type="button" class="btn btn-listo" value="=" (click)="agregar('=')"></button>
+
+  </div>
+
+  <div class="parte_inferior">
+    Jueves, 05 de Enero del 2023
+  </div>
+
+</div>
