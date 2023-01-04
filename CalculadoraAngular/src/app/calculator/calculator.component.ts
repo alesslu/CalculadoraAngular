@@ -28,6 +28,9 @@ export class CalculatorComponent {
     else if (valor === 'C') {
       this.limpiar();
     }
+    else if (valor === 'all-clear') {
+      this.retroceso();
+    }
     else if (this.salida === '') {
       this.salida = "$" + valor;
     }
@@ -59,7 +62,16 @@ export class CalculatorComponent {
   }
 
   limpiar(): void {
-    this.salida = '';
+    this.salida = '$';
+    this.numeroActual = 0;
+    this.numeroAnterior = 0;
+  }
+
+  retroceso():void{
+      this.salida = String(this.salida.slice(0,this.salida.length-1));
   }
 
 }
+
+
+
